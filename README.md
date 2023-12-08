@@ -1,7 +1,7 @@
 ## CAD-for-VLSI-Systems-CS6230
 
 ### Objective:
-Design and implement an area-efficient pipelined module supporting unary operators (activation functions) for transforming data streams using different datatypes.
+Design and implement an area-efficient pipelined module supporting unary operators (activation functions) for transforming data streams using cfloat8_1_5_2 datatype [(link)]([https://www.example.com](https://cdn.motor1.com/pdf-files/535242876-tesla-dojo-technology.pdf)).
 
 ### Functionality:
 The module supports the following unary operators: tanh(x), sigmoid(x), leaky_ReLu(x), SeLu(x).
@@ -12,9 +12,6 @@ The module supports the following unary operators: tanh(x), sigmoid(x), leaky_Re
 2. Pipelining implemented to ensure full bandwidth utilization without stalls.
 3. The design accommodates the use of a single unary function for a complete data stream.
 4. Handles datatype cfloat8_1_5_2 efficiently for the specified operations.
-
-### Datatype Supported:
-cfloat8_1_5_2
 
 ### Notes:
 
