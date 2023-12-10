@@ -13,7 +13,8 @@ package condensed;
 		Cfloat_ret exp_1 =  cfloat_ret_def();						// return value
 
 		Bool x_is_neg	= unpack(x.sign);
-		Int#(7)	order	= signExtend(unpack(pack(x.exp))) - signExtend(unpack(pack(bias)));
+		UInt#(7) temppp= extend(x.exp);
+		Int#(7)	order	= unpack(pack(temppp)) - signExtend(unpack(pack(bias)));
 		Int#(7) temp_add_exp = 0, temp_sum=0 ;
 
 		if(x_is_denorm)									// denormal
@@ -82,8 +83,9 @@ package condensed;
 								if (expon_1) temp_add_exp = 1;
 								else if (expon_2) temp_add_exp = 2;
 								else temp_add_exp = 0;
+								
 
-								temp_sum = signExtend(unpack(pack(x.exp))) - temp_add_exp ;
+								temp_sum = unpack(pack(temppp)) - temp_add_exp ;
 								if (temp_sum==0)
 									begin
 										if(exp_1.val.mant[1]==1'b0)
@@ -253,7 +255,8 @@ package condensed;
 			temp.exp 	= 0 ;			// will add actual exponent later. this 0 does not mean denormal. that info goes with flag
 
 			Cfloat_152 temp2 = mul_111(temp,exp_is_denorm);
-			Int#(7) temp_exp_sum  = signExtend(unpack(pack(temp2.exp))) + signExtend(unpack(pack(exp_term.exp))) ;
+			UInt#(7) temppp = extend(exp_term.exp);
+			Int#(7) temp_exp_sum  = signExtend(unpack(pack(temp2.exp))) + (unpack(pack(temppp))) ;
 
 			// $display(" exp_x-1 to selu");
 			// $display(exp_term.sign,"-%b",exp_term.exp,"-%b",exp_term.mant,"-",exp_is_denorm,"-",exp_overflow);
@@ -311,7 +314,8 @@ package condensed;
 			
 			Cfloat_152 temp2 = mul_101(temp,x_is_denorm);
 			Int#(7) temp_exp_sum  = signExtend(unpack(pack(temp2.exp))) -7 ;
-			temp_exp_sum	= temp_exp_sum + signExtend(unpack(pack(x.exp))) ;
+			UInt#(7) temppp = extend(x.exp);
+			temp_exp_sum	= temp_exp_sum + unpack(pack(temppp)) ;
 			
 			if (x.sign==1'b0) 
 				begin
@@ -408,7 +412,8 @@ package condensed;
 			// add 2 to exp_term (in this case this sum is always >1)(sigmoid always >0)
 			// then invert and store it in out_term
 			Cfloat_ret res = cfloat_ret_def();
-			Int#(7)	order	= signExtend(unpack(pack(exp_term.exp))) - signExtend(unpack(pack(bias)));
+			UInt #(7) temppp= extend(exp_term.exp);
+			Int#(7)	order	= (unpack(pack(temppp))) - signExtend(unpack(pack(bias)));
 			Int#(7) temp_exp_sum = 0;
 			
 			Cfloat_152 temp = exp_term;
@@ -449,6 +454,7 @@ package condensed;
 				end
 			else if(order>3)					// 1/(0+exp_term); 2 ignored ; this number is can not be denormal
 				begin
+					
 					res.val.sign = 1'b0;
 					if(exp_term.mant==2'b00) temp_exp_sum = - order ;
 					else temp_exp_sum = -order -1 ;
@@ -821,7 +827,8 @@ package condensed;
 			// small x - tanhx = x
 			// big x - tanhx = 1 
 			Cfloat_ret res = cfloat_ret_def();
-			Int#(7)	order	= signExtend(unpack(pack(x.exp))) - signExtend(unpack(pack(bias)));
+			UInt#(7) temppp = extend(x.exp);
+			Int#(7)	order	= unpack(pack(temppp)) - signExtend(unpack(pack(bias)));
 
 			if(x_is_denorm)
 				begin

@@ -77,7 +77,7 @@ package testbench;
 			
 			if(cycles==2)
 				begin
-					dut.set_mode(2);
+					dut.set_mode(0);
 					$display($time,":Mode set");
 				end	
 			if(cycles==3)
@@ -90,7 +90,7 @@ package testbench;
 					Cfloat_152 inp;
 					inp.sign = 1'b0 ;
 					inp.mant = 2'b01 ;
-					inp.exp = 00 ;
+					inp.exp = 15 ;
 
 					dut.set_inp(inp) ;
 					$display($time,":Input   set");
@@ -100,7 +100,7 @@ package testbench;
 					Cfloat_152 inp;
 					inp.sign = 1'b1 ;
 					inp.mant = 2'b00 ;
-					inp.exp = 20 ;
+					inp.exp = 14 ;
 
 					dut.set_inp(inp) ;
 					$display($time,":Input   set");
@@ -119,6 +119,9 @@ package testbench;
 					Cfloat_ret temp;
 					temp = dut.read_out();
 					$display($time,":Reading  Output");
+					$display("Output denormal:",temp.val_is_denorm);
+					$display("Output overflow:",temp.val_overflow);
+					$display("Output underflow:",temp.val_underflow);
 					cfloat_read(temp.val,11);
 				end
 			

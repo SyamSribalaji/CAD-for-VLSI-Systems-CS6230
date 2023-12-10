@@ -178,7 +178,7 @@ package functions;
 	endfunction
 
 
-	// FUNCTION TO MULTIPLY 1.25 = 1.01 
+	// FUNCTION TO MULTIPLY 1.25 = 1.01 - cannot do overflow checks; use carefully
 	function Cfloat_152 mul_101(Cfloat_152 val, Bool x_is_denorm);
 		Cfloat_152 res ;
 		Bool add_exp	= unpack((&(val.mant)) & (~(pack(x_is_denorm)))) ;	// only if not denormal
@@ -204,7 +204,7 @@ package functions;
 
 		return res;
 	endfunction
-	// FUNCTION TO MULTIPLY 1.75 = 1.11 
+	// FUNCTION TO MULTIPLY 1.75 = 1.11 - cannot do overflow checks; use carefully 
 	function Cfloat_152 mul_111(Cfloat_152 val, Bool x_is_denorm);
 		Cfloat_152 res ;
 		Bool add_exp	= unpack((|(val.mant) & (~(pack(x_is_denorm))))) ;		// only if not denormal
