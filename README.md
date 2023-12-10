@@ -1,7 +1,7 @@
 ## CAD-for-VLSI-Systems-CS6230
 
 ### Objective:
-Design and implement an area-efficient pipelined module supporting unary operators (activation functions) for transforming data streams using [cfloat8_1_5_2 datatypeCfloat8](https://cdn.motor1.com/pdf-files/535242876-tesla-dojo-technology.pdf)
+Design and implement an area-efficient pipelined module supporting unary operators (activation functions) for transforming data streams using [cfloat8_1_5_2](https://cdn.motor1.com/pdf-files/535242876-tesla-dojo-technology.pdf)
 
 
 ### Functionality:
