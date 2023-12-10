@@ -89,8 +89,8 @@ package testbench;
 				begin
 					Cfloat_152 inp;
 					inp.sign = 1'b0 ;
-					inp.mant = 2'b00 ;
-					inp.exp = 11 ;
+					inp.mant = 2'b01 ;
+					inp.exp = 00 ;
 
 					dut.set_inp(inp) ;
 					$display($time,":Input   set");
@@ -100,20 +100,21 @@ package testbench;
 					Cfloat_152 inp;
 					inp.sign = 1'b1 ;
 					inp.mant = 2'b00 ;
-					inp.exp = 11 ;
+					inp.exp = 20 ;
 
 					dut.set_inp(inp) ;
 					$display($time,":Input   set");
 				end
-			if(cycles==9)
-				$display($time,":DONE");
-			if(cycles==9)
-				$finish(0);
+			if(cycles==40)
+				begin
+					$display($time,":DONE");
+					$finish(0);
+				end
 			
 		endrule
 		rule every_cycle_tb_rd;
 
-			if(cycles==8 || cycles==9)
+			if(cycles==9 || cycles==8)
 				begin
 					Cfloat_ret temp;
 					temp = dut.read_out();

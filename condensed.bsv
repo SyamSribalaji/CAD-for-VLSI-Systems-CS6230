@@ -8,179 +8,179 @@ package condensed;
 
 
 		// RETURN EXP(X)-1
-		function Cfloat_ret calc_exp_1(Cfloat_152 x, Bool x_is_denorm, UInt#(6) bias);
+	function Cfloat_ret calc_exp_1(Cfloat_152 x, Bool x_is_denorm, UInt#(6) bias);
 
-			Cfloat_ret exp_1 =  cfloat_ret_def();						// return value
+		Cfloat_ret exp_1 =  cfloat_ret_def();						// return value
 
-			Bool x_is_neg	= unpack(x.sign);
-			Int#(7)	order	= signExtend(unpack(pack(x.exp))) - signExtend(unpack(pack(bias)));
-			Int#(7) temp_add_exp = 0, temp_sum=0 ;
+		Bool x_is_neg	= unpack(x.sign);
+		Int#(7)	order	= signExtend(unpack(pack(x.exp))) - signExtend(unpack(pack(bias)));
+		Int#(7) temp_add_exp = 0, temp_sum=0 ;
 
-			if(x_is_denorm)									// denormal
-				begin
-					if((x_is_neg) && (order==0) && (x.mant==2'b11))			// denormal negative - only case in denormal with change
-						begin		
-							begin
-								exp_1.val.sign		= x.sign;
-								exp_1.val.mant		= 2'b10;
-								exp_1.val.exp		= x.exp;
-							end
-						end
-					else								// denormal positive
+		if(x_is_denorm)									// denormal
+			begin
+				if((x_is_neg) && (order==0) && (x.mant==2'b11))			// denormal negative - only case in denormal with change
+					begin		
 						begin
-							exp_1.val	= x;
+							exp_1.val.sign		= x.sign;
+							exp_1.val.mant		= 2'b10;
+							exp_1.val.exp		= x.exp;
 						end
-					exp_1.val_is_denorm	= True;
-					exp_1.val_overflow	= False;
-				end
-			else										// normal
-				begin
-					if(x_is_neg)							// normal negative
-						begin
-							Bool mant_00	= ((order==-3)&&(x.mant[1]==1'b0)) || ((order==-2)&&(x.mant==2'b01)) || ((order==-1)&&(x.mant[1]==1'b1)) || ((order==1)&&(x.mant[1]==1'b1)) ;
-							Bool mant_01	= ((order==-3)&&(x.mant==2'b10)) || ((order==-2)&&(x.mant==2'b10)) || ((order==0)&&(x.mant==2'b00)) ;
-							Bool mant_10	= ((order==-3)&&(x.mant==2'b11)) || ((order==-2)&&(x.mant==2'b11)) || ((order==-1)&&(x.mant==2'b00)) || ((order==0)&&(x.mant[1]!=x.mant[0])) ;
-							Bool mant_11	= ((order==-2)&&(x.mant==2'b00)) || ((order==-1)&&(x.mant==2'b01)) || ((order==0)&&(x.mant==2'b11)) || ((order==1)&&(x.mant[1]==1'b0)) ;
+					end
+				else								// denormal positive
+					begin
+						exp_1.val	= x;
+					end
+				exp_1.val_is_denorm	= True;
+				exp_1.val_overflow	= False;
+			end
+		else										// normal
+			begin
+				if(x_is_neg)							// normal negative
+					begin
+						Bool mant_00	= ((order==-3)&&(x.mant[1]==1'b0)) || ((order==-2)&&(x.mant==2'b01)) || ((order==-1)&&(x.mant[1]==1'b1)) || ((order==1)&&(x.mant[1]==1'b1)) ;
+						Bool mant_01	= ((order==-3)&&(x.mant==2'b10)) || ((order==-2)&&(x.mant==2'b10)) || ((order==0)&&(x.mant==2'b00)) ;
+						Bool mant_10	= ((order==-3)&&(x.mant==2'b11)) || ((order==-2)&&(x.mant==2'b11)) || ((order==-1)&&(x.mant==2'b00)) || ((order==0)&&(x.mant[1]!=x.mant[0])) ;
+						Bool mant_11	= ((order==-2)&&(x.mant==2'b00)) || ((order==-1)&&(x.mant==2'b01)) || ((order==0)&&(x.mant==2'b11)) || ((order==1)&&(x.mant[1]==1'b0)) ;
 
-							if(order<=-4)	exp_1.val.mant = x.mant ;
-							else if(mant_11) exp_1.val.mant = 2'b11;	 
-							else if(mant_00) exp_1.val.mant = 2'b00;
-							else if(mant_01) exp_1.val.mant = 2'b01;
-							else if(mant_10) exp_1.val.mant = 2'b10;
-							else if(order>=2) exp_1.val.mant = 2'b00;	//1
+						if(order<=-4)	exp_1.val.mant = x.mant ;
+						else if(mant_11) exp_1.val.mant = 2'b11;	 
+						else if(mant_00) exp_1.val.mant = 2'b00;
+						else if(mant_01) exp_1.val.mant = 2'b01;
+						else if(mant_10) exp_1.val.mant = 2'b10;
+						else if(order>=2) exp_1.val.mant = 2'b00;	//1
 
-							
-							// Bool expon_0 	= ;
-							Bool expon_1	= ((order==-2)&&(x.mant==2'b0)) || ((order==-1)&&(x.mant[1]==1'b0)) || ((order==0)&&(x.mant!=2'b01)) || ((order==1)&&(x.mant[1]==1'b1));
-							Bool expon_2	= ((order==1)&&(x.mant[1]==1'b0));
-							
-
-							
-							if(order<=-4)	exp_1.val.exp = x.exp;
-							else if (order>=2)		// = -1
-								begin
-									if(bias==0)
-										begin
-											exp_1.val.exp = 0 ;
-											exp_1.val.mant = 2'b11 ; // changed from prev closest rep 0.11
-											exp_1.val_is_denorm = True;
-										end
-									else if (bias>31)
-										begin
-											exp_1.val.exp = 31 ;
-											exp_1.val.mant = 2'b11;
-											exp_1.val_is_denorm = False;
-										end
-									else
-										begin
-											exp_1.val.exp = truncate(bias) ;
-											exp_1.val_is_denorm = False;
-										end
-								end
-							else 
-								begin
-									if (expon_1) temp_add_exp = 1;
-									else if (expon_2) temp_add_exp = 2;
-									else temp_add_exp = 0;
-
-									temp_sum = signExtend(unpack(pack(x.exp))) - temp_add_exp ;
-									if (temp_sum==0)
-										begin
-											if(exp_1.val.mant[1]==1'b0)
-												begin
-													exp_1.val.mant = 2'b11;
-													exp_1.val.exp = 0 ;
-													exp_1.val_is_denorm = True;
-												end
-											else
-												begin
-													exp_1.val.exp = 1 ;
-													exp_1.val.mant = 2'b00;
-													exp_1.val_is_denorm = False;
-												end
-										end
-									else if(temp_sum==-1)  // cannot be = -2 as denormal covered elsewhere
-										begin
-											exp_1.val.exp = 0 ;
-											exp_1.val.mant = {1'b1,exp_1.val.mant[1]};
-											exp_1.val_is_denorm = True;
-										end
-									else
-										begin
-											exp_1.val.exp = truncate(unpack(pack(temp_sum))) ;
-											exp_1.val_is_denorm = False;
-										end	
-
-								end
-
-							if(order>=2 && bias>31) exp_1.val_overflow = True;
-							else exp_1.val_overflow = False;
-							
-						end
 						
-					else								// normal positive
-						begin
-							Bool overflow	= (order>=5) || ((order==4)&&(x.mant[1]==1'b1));
-							Bool mant_00	= ((order==-2)&&(x.mant[1]==x.mant[0])) || ((order==-1)&&(x.mant==2'b10)) || ((order==1)&&(x.mant==2'b11)) || ((order==2)&&(x.mant[0]==1'b1)) || ((order==3)&&(x.mant==2'b11)) || ((order==4)&&(x.mant==2'b00));
-							Bool mant_01	= ((order==-1)&&(x.mant[1]==x.mant[0])) || ((order==0)&&(x.mant[0]==1'b1))  || ((order==1)&&(x.mant[1]!=x.mant[0])) || ((order==3)&&(x.mant[1]!=x.mant[0])) ;
-							Bool mant_10	= ((order==-2)&&(x.mant==2'b01)) || ((order==1)&&(x.mant==2'b00)) || ((order==2)&&(x.mant[0]==1'b0)) || ((order==3)&&(x.mant==2'b00)) ;
-							Bool mant_11	= ((order==-2)&&(x.mant==2'b10)) || ((order==-1)&&(x.mant==2'b01)) || ((order==0)&&(x.mant[0]==1'b0)) || ((order==4)&&(x.mant==2'b01)) ;
+						// Bool expon_0 	= ;
+						Bool expon_1	= ((order==-2)&&(x.mant==2'b0)) || ((order==-1)&&(x.mant[1]==1'b0)) || ((order==0)&&(x.mant!=2'b01)) || ((order==1)&&(x.mant[1]==1'b1));
+						Bool expon_2	= ((order==1)&&(x.mant[1]==1'b0));
+						
 
-							if(order<=-3)	exp_1.val.mant = x.mant ;	 
-							else if(mant_00) exp_1.val.mant = 2'b00;
-							else if(mant_01) exp_1.val.mant = 2'b01;
-							else if(mant_10) exp_1.val.mant = 2'b10;
-							else if((overflow)||(mant_11))	 exp_1.val.mant = 2'b11;
+						
+						if(order<=-4)	exp_1.val.exp = x.exp;
+						else if (order>=2)		// = -1
+							begin
+								if(bias==0)
+									begin
+										exp_1.val.exp = 0 ;
+										exp_1.val.mant = 2'b11 ; // changed from prev closest rep 0.11
+										exp_1.val_is_denorm = True;
+									end
+								else if (bias>31)
+									begin
+										exp_1.val.exp = 31 ;
+										exp_1.val.mant = 2'b11;
+										exp_1.val_is_denorm = False;
+									end
+								else
+									begin
+										exp_1.val.exp = truncate(bias) ;
+										exp_1.val_is_denorm = False;
+									end
+							end
+						else 
+							begin
+								if (expon_1) temp_add_exp = 1;
+								else if (expon_2) temp_add_exp = 2;
+								else temp_add_exp = 0;
 
-							// Bool expon_0 	= ;
-							Bool expon_1	= (order==0 && x.mant[1]!=x.mant[0])||(order==-1 && x.mant[1]==1'b1)||(order==1 && x.mant==2'b00)||(order==-2 && x.mant==2'b11) ;
-							Bool expon_2	= (order==1 && x.mant==2'b01)||(order==0 && x.mant==2'b11) ; 
-							Bool expon_3	= (order==1 && x.mant==2'b10)||(order==3 && x.mant==2'b00) ;
-							Bool expon_4	= (order==1 && x.mant==2'b11) ;
-							Bool expon_5	= (order==2 && x.mant==2'b01) ;
-							Bool expon_6	= (order==2 && x.mant==2'b10) ;
-							Bool expon_8	= (order==3 && x.mant==2'b00)||(order==2 && x.mant==2'b11) ; 
-							Bool expon_11	= (order==3 && x.mant==2'b01) ;
-							Bool expon_14	= (order==3 && x.mant==2'b10) ;
-							Bool expon_17	= (order==3 && x.mant==2'b11) ;
-							Bool expon_19	= (order==4 && x.mant==2'b00) ;
-							Bool expon_24	= (order==4 && x.mant==2'b01) ;
-							// UInt#(5) temp_add_exp ;
+								temp_sum = signExtend(unpack(pack(x.exp))) - temp_add_exp ;
+								if (temp_sum==0)
+									begin
+										if(exp_1.val.mant[1]==1'b0)
+											begin
+												exp_1.val.mant = 2'b11;
+												exp_1.val.exp = 0 ;
+												exp_1.val_is_denorm = True;
+											end
+										else
+											begin
+												exp_1.val.exp = 1 ;
+												exp_1.val.mant = 2'b00;
+												exp_1.val_is_denorm = False;
+											end
+									end
+								else if(temp_sum==-1)  // cannot be = -2 as denormal covered elsewhere
+									begin
+										exp_1.val.exp = 0 ;
+										exp_1.val.mant = {1'b1,exp_1.val.mant[1]};
+										exp_1.val_is_denorm = True;
+									end
+								else
+									begin
+										exp_1.val.exp = truncate(unpack(pack(temp_sum))) ;
+										exp_1.val_is_denorm = False;
+									end	
 
-							if(order<=-3)	exp_1.val.exp = x.exp;
-							else if (overflow) exp_1.val.exp = 31;
-							else 
-								begin
-									if (expon_1) temp_add_exp = 1;
-									else if (expon_2) temp_add_exp = 2;
-									else if (expon_3) temp_add_exp = 3;
-									else if (expon_4) temp_add_exp = 4;
-									else if (expon_5) temp_add_exp = 5;
-									else if (expon_6) temp_add_exp = 6;
-									else if (expon_8) temp_add_exp = 8;
-									else if (expon_11) temp_add_exp = 11;
-									else if (expon_14) temp_add_exp = 14;
-									else if (expon_17) temp_add_exp = 17;
-									else if (expon_19) temp_add_exp = 19;
-									else if (expon_24) temp_add_exp = 24;
-									else temp_add_exp = 0;
+							end
 
-									// temp_sum 	= order + temp_add ;		// cannot overflow/underflow
-									// temp_sum 	= exp_1.val.exp  + bias ;
-									exp_1.val.exp	= x.exp + truncate(unpack(pack(temp_add_exp))) ;
-								end
+						if(order>=2 && bias>31) exp_1.val_overflow = True;
+						else exp_1.val_overflow = False;
+						
+					end
+					
+				else								// normal positive
+					begin
+						Bool overflow	= (order>=5) || ((order==4)&&(x.mant[1]==1'b1));
+						Bool mant_00	= ((order==-2)&&(x.mant[1]==x.mant[0])) || ((order==-1)&&(x.mant==2'b10)) || ((order==1)&&(x.mant==2'b11)) || ((order==2)&&(x.mant[0]==1'b1)) || ((order==3)&&(x.mant==2'b11)) || ((order==4)&&(x.mant==2'b00));
+						Bool mant_01	= ((order==-1)&&(x.mant[1]==x.mant[0])) || ((order==0)&&(x.mant[0]==1'b1))  || ((order==1)&&(x.mant[1]!=x.mant[0])) || ((order==3)&&(x.mant[1]!=x.mant[0])) ;
+						Bool mant_10	= ((order==-2)&&(x.mant==2'b01)) || ((order==1)&&(x.mant==2'b00)) || ((order==2)&&(x.mant[0]==1'b0)) || ((order==3)&&(x.mant==2'b00)) ;
+						Bool mant_11	= ((order==-2)&&(x.mant==2'b10)) || ((order==-1)&&(x.mant==2'b01)) || ((order==0)&&(x.mant[0]==1'b0)) || ((order==4)&&(x.mant==2'b01)) ;
+
+						if(order<=-3)	exp_1.val.mant = x.mant ;	 
+						else if(mant_00) exp_1.val.mant = 2'b00;
+						else if(mant_01) exp_1.val.mant = 2'b01;
+						else if(mant_10) exp_1.val.mant = 2'b10;
+						else if((overflow)||(mant_11))	 exp_1.val.mant = 2'b11;
+
+						// Bool expon_0 	= ;
+						Bool expon_1	= (order==0 && x.mant[1]!=x.mant[0])||(order==-1 && x.mant[1]==1'b1)||(order==1 && x.mant==2'b00)||(order==-2 && x.mant==2'b11) ;
+						Bool expon_2	= (order==1 && x.mant==2'b01)||(order==0 && x.mant==2'b11) ; 
+						Bool expon_3	= (order==1 && x.mant==2'b10)||(order==3 && x.mant==2'b00) ;
+						Bool expon_4	= (order==1 && x.mant==2'b11) ;
+						Bool expon_5	= (order==2 && x.mant==2'b01) ;
+						Bool expon_6	= (order==2 && x.mant==2'b10) ;
+						Bool expon_8	= (order==3 && x.mant==2'b00)||(order==2 && x.mant==2'b11) ; 
+						Bool expon_11	= (order==3 && x.mant==2'b01) ;
+						Bool expon_14	= (order==3 && x.mant==2'b10) ;
+						Bool expon_17	= (order==3 && x.mant==2'b11) ;
+						Bool expon_19	= (order==4 && x.mant==2'b00) ;
+						Bool expon_24	= (order==4 && x.mant==2'b01) ;
+						// UInt#(5) temp_add_exp ;
+
+						if(order<=-3)	exp_1.val.exp = x.exp;
+						else if (overflow) exp_1.val.exp = 31;
+						else 
+							begin
+								if (expon_1) temp_add_exp = 1;
+								else if (expon_2) temp_add_exp = 2;
+								else if (expon_3) temp_add_exp = 3;
+								else if (expon_4) temp_add_exp = 4;
+								else if (expon_5) temp_add_exp = 5;
+								else if (expon_6) temp_add_exp = 6;
+								else if (expon_8) temp_add_exp = 8;
+								else if (expon_11) temp_add_exp = 11;
+								else if (expon_14) temp_add_exp = 14;
+								else if (expon_17) temp_add_exp = 17;
+								else if (expon_19) temp_add_exp = 19;
+								else if (expon_24) temp_add_exp = 24;
+								else temp_add_exp = 0;
+
+								// temp_sum 	= order + temp_add ;		// cannot overflow/underflow
+								// temp_sum 	= exp_1.val.exp  + bias ;
+								exp_1.val.exp	= x.exp + truncate(unpack(pack(temp_add_exp))) ;
+							end
 
 
-							if(overflow) 	exp_1.val_overflow	= True;
-							else		exp_1.val_overflow	= False;
-							exp_1.val_is_denorm = False;
-						end
-					exp_1.val.sign	= x.sign;
-				end
-			exp_1.val_underflow	= False;
-			// $display(exp_1.val.mant);
-			return exp_1;
-		endfunction
+						if(overflow) 	exp_1.val_overflow	= True;
+						else		exp_1.val_overflow	= False;
+						exp_1.val_is_denorm = False;
+					end
+				exp_1.val.sign	= x.sign;
+			end
+		exp_1.val_underflow	= False;
+		// $display(exp_1.val.mant);
+		return exp_1;
+	endfunction
 
 	// INTERFACE OF  CONDENSED 
 	interface Ifc_cond ;					
@@ -232,6 +232,7 @@ package condensed;
 			exp_is_denorm <= temp.val_is_denorm ;
 			exp_underflow <= temp.val_underflow ;
 			exp_overflow <= temp.val_overflow ;
+
 			// $display("x to exp_x-1");
 			// $display(x.sign,"-%b",x.exp,"-%b",x.mant,"-",x_is_denorm);
 			// $display(temp.val.sign,"-%b",temp.val.exp,"-%b",temp.val.mant,"-",temp.val_is_denorm,"-",temp.val_underflow);
@@ -241,7 +242,7 @@ package condensed;
 			x2_is_denorm <= x_is_denorm ;
 		endrule
 		// Write SELU(X) into output
-		rule  write_selu(mode==0);								// be sure to read this value after setting proper mode. reads from 2nd stage x
+		rule write_selu(mode==0);								// be sure to read this value after setting proper mode. reads from 2nd stage x
 			// x>0  output is x = x2
 			// x<0  output is 1.75 (exp(x)-1) = 1.75 * exp_term
 			Cfloat_ret res ;
@@ -555,6 +556,7 @@ package condensed;
 						begin
 							if(order==-1)
 								begin
+									// $display("EXecuting order -1");
 									if(exp_term.sign==1'b0)
 										begin
 											if(bias==31) res.val.exp = 31;
@@ -571,11 +573,17 @@ package condensed;
 													res.val.exp = 1;
 													res.val_is_denorm = False;
 												end
-											else res.val.exp = truncate(bias);
+											else 
+												begin
+													res.val.exp = truncate(bias);
+													res.val_is_denorm = False;
+												end
 										end
+									// $display($time,"before inv:",res.val.sign,"-%b",res.val.exp,"-%b",res.val.mant);
 								end
 							else if(order==0)
 								begin
+									
 									if(exp_term.sign==1'b1)
 										begin
 											res.val.mant = 2'b00 ;     // 00 for both cases
@@ -671,7 +679,7 @@ package condensed;
 
 					// copied from order>3 part  - // some of these may be denormal - possible bugs
 					order	= signExtend(unpack(pack(res.val.exp))) - signExtend(unpack(pack(bias)));
-
+					// $display($time,"THIS ORDer %b",order);
 					if(res.val_is_denorm)
 						begin
 							if(res.val.mant==2'b01)	// 00 can not occur
@@ -736,10 +744,13 @@ package condensed;
 						begin
 							if(res.val.mant==2'b00) temp_exp_sum = - order ;
 							else temp_exp_sum = -order -1 ;
+							temp_exp_sum = temp_exp_sum + extend(unpack(pack(bias))) ;
 
+							// $display($time,"old mant %b",res.val.mant);
+							// $display($time,"THIS temp_exp ",temp_exp_sum);
 							if (res.val.mant[1]==res.val.mant[0]) res.val.mant = 2'b00 ;
 							else res.val.mant = {res.val.mant[0],res.val.mant[1]} ; // see truth table
-
+							// $display($time,"new mant %B",res.val.mant);
 							if (temp_exp_sum==0)
 								begin
 									if(res.val.mant[1]==1'b0)			// denormal approx to lower and higher
@@ -799,7 +810,12 @@ package condensed;
 			out_underflow <= res.val_underflow;
 			out_overflow <= res.val_overflow;
 			
-		endrule
+
+			// $display(" exp_x-1 to sigmoid");
+			// $display(exp_term.sign,"-%b",exp_term.exp,"-%b",exp_term.mant,"-",exp_is_denorm,"-",exp_overflow);
+			// $display($time,"after inv:",res.val.sign,"-%b",res.val.exp,"-%b",res.val.mant);
+
+		endrule	
 		// Write TANH(X) into output
 		rule write_tanh(mode==3);
 			// small x - tanhx = x
@@ -841,9 +857,10 @@ package condensed;
 							res.val.sign	= x.sign;
 							res.val.exp	= x.exp-1;
 
-							if(x.mant[1]==1'b0) res.val.mant = 2'b11;
+							 if(x.mant==2'b00) res.val.mant = 2'b10;
+							else if(x.mant==2'b01) res.val.mant = 2'b11;
 							else if(x.mant==2'b10) res.val.mant = 2'b01;
-							else res.val.mant = 2'b00;
+							else if(x.mant==2'b11) res.val.mant = 2'b00;
 
 							if(res.val.exp==0)
 								begin
