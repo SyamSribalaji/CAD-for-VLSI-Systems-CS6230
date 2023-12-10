@@ -26,6 +26,7 @@ The module supports the following unary operators: SeLu(x), Leaky_ReLU(x) , Sigm
      \[
      f(x) = \frac{1}{1 + e^{-x}}
      \]
+     ![Sigmoid Formula](imgs/sigmoid.png)
 
 4. **Tanh(x):**
    - The formula for Tanh(x) is given as:
