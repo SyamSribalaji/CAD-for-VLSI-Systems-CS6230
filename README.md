@@ -11,14 +11,14 @@ The module supports the following unary operators: SeLu(x), Leaky_ReLU(x) , Sigm
 1. **SeLu(x):**
 
    ![Selu](imgs/selu.png)
-      Since the datatype only has 2 mantissa bits, we approximate the constants to 1(1.00) and 1.75(1.11) .
+   - Since the datatype only has 2 mantissa bits, we approximate the constants to 1(1.00) and 1.75(1.11) .
 
 2. **Leaky ReLU(x):**
    
    ![Leaky_relu](imgs/leaky.png)
-      0.01 can be approximately represented as
+    -  0.01 can be approximately represented as
    ![leakyval](imgs/leakyval.png)
-      This allows us to multiply it with inputs.
+    -  This allows us to multiply it with inputs.
 3. **Sigmoid(x):**
    
    ![Sigmoid Formula](imgs/sigmoid.png)
