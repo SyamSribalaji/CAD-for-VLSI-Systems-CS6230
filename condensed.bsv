@@ -262,7 +262,7 @@ package condensed;
 			// $display(exp_term.sign,"-%b",exp_term.exp,"-%b",exp_term.mant,"-",exp_is_denorm,"-",exp_overflow);
 			// $display(temp2.sign,"-%b",temp_exp_sum,"-%b",temp2.mant);
 
-			if (x.sign==1'b0) 
+			if (x_2.sign==1'b0) 
 				begin
 					res.val			= x_2;
 					res.val_is_denorm	= x2_is_denorm ;
