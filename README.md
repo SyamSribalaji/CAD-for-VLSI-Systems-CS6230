@@ -7,7 +7,6 @@ Design and implement an area-efficient pipelined module supporting unary operato
 ### Functionality:
 The module supports the following unary operators: SeLu(x), Leaky_ReLU(x) , Sigmoid(x),  Tanh(x).
 
-### Implementation:
 1. **SeLu(x):**
 
    ![Selu](imgs/selu.png)
@@ -27,7 +26,9 @@ The module supports the following unary operators: SeLu(x), Leaky_ReLU(x) , Sigm
    
    ![tanh](imgs/tanh.png)
 
-### Binary Multiplication:
+
+### Implementation:
+We can see that ![exp_1](https://latex2image-output.s3.amazonaws.com/img-aWkXPz7WZuRP.png) occurs in both SELU and sigmoid. We exploit this to use the same logic to perform computations for both these functions. 
 
 ### TestBench Usage:
 ```bash
