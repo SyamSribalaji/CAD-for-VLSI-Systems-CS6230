@@ -29,3 +29,8 @@ The module supports the following unary operators: SeLu(x), Leaky_ReLU(x) , Sigm
 
 ### Binary Multiplication:
 
+### TestBench Usage:
+```bash
+$ ./shrtct testbench mkTestCON
+```
+Replace testbench with the name of your bsv and mkTestCON with your TB's top module.
