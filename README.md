@@ -9,20 +9,20 @@ The module supports the following unary operators: SeLu(x), Leaky_ReLU(x) , Sigm
 
 ### Implementation:
 1. **SeLu(x):**
-   
-    ![Selu](imgs/selu.png)
 
-2. **Leaky ReLU(x):**
+               ![Selu](imgs/selu.png)
+
+3. **Leaky ReLU(x):**
    
-   ![Leaky_relu](imgs/leaky.png)
+               ![Leaky_relu](imgs/leaky.png)
       
-3. **Sigmoid(x):**
+4. **Sigmoid(x):**
    
-     ![Sigmoid Formula](imgs/sigmoid.png)
+               ![Sigmoid Formula](imgs/sigmoid.png)
 
-4. **Tanh(x):**
+5. **Tanh(x):**
    
-  ![tanh](imgs/tanh.png)
+               ![tanh](imgs/tanh.png)
 
 
 
