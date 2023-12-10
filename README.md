@@ -10,7 +10,7 @@ The module supports the following unary operators: SeLu(x), Leaky_ReLU(x) , Sigm
 ### Implementation:
 1. SeLu(x) is defined as(approx):
          f(x) = 1.0507\*x , if x>0
-         \[f(x) = 1.0507\*1.6733\*(e^{x}-1)\] , if x<0
+         \[ f(x) = 1.0507\*1.6733\*(e^{x}-1) \] , if x<0
 
    Since Cfloat_8_152 has only two mantissa bits, we approximate the constants to 1 and 1.75.
 
@@ -24,6 +24,6 @@ The module supports the following unary operators: SeLu(x), Leaky_ReLU(x) , Sigm
          f(x) = \frac{1}{1 + e^{-x}}
    
 4. Tanh(x) is defined as:
-         \[f(x) =  \frac{e^{x}-e^{-x}}{e^{x} + e^{-x}} \]
+         \[ f(x) =  \frac{e^{x}-e^{-x}}{e^{x} + e^{-x}} \]
 
 
