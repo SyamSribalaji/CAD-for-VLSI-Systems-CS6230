@@ -9,20 +9,15 @@ The module supports the following unary operators: SeLu(x), Leaky_ReLU(x) , Sigm
 
 ### Implementation:
 1. **SeLu(x):**
-   - Sigmoid(x) is defined as:
     ![Selu](imgs/selu.png)
 
 2. **Leaky ReLU(x):**
-   - Sigmoid(x) is defined as:
    ![Leaky_relu](imgs/leaky.png)
       
 3. **Sigmoid(x):**
-   - Sigmoid(x) is defined as:
-
      ![Sigmoid Formula](imgs/sigmoid.png)
 
 4. **Tanh(x):**
-   - Tanh(x) is defined as:
   ![tanh](imgs/tanh.png)
 
 
