@@ -1,0 +1,4 @@
+bsc $1.bsv
+bsc -sim -g $2 -u $1.bsv
+bsc  -sim -e $2
+./a.out
