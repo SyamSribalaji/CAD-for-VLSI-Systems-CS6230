@@ -1,0 +1,1694 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.34 (git sha1 4a1b5599258, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /openlane/designs/mkCondensed/src/mkCondensed.v
+Parsing SystemVerilog input from `/openlane/designs/mkCondensed/src/mkCondensed.v' to AST representation.
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+Warning: Encountered `translate_off' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using a portable and standards-compliant construct such as `ifdef is recommended!
+Generating RTLIL representation for module `\mkCondensed'.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:417.3-430.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:434.3-445.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:449.3-461.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:465.3-476.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1052.3-1059.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1060.3-1068.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1069.3-1077.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1078.3-1088.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1089.3-1103.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1104.3-1111.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1112.3-1138.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1139.3-1147.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1148.3-1180.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1181.3-1198.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1199.3-1207.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1208.3-1224.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1225.3-1243.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /openlane/designs/mkCondensed/src/mkCondensed.v:1244.3-1259.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+2. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/mkCondensed/runs/RUN_2023.12.11_04.13.36/tmp/synthesis/hierarchy.dot'.
+Dumping module mkCondensed to page 1.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \mkCondensed
+
+3.2. Analyzing design hierarchy..
+Top module:  \mkCondensed
+Removed 0 unused modules.
+Renaming module mkCondensed to mkCondensed.
+
+4. Executing TRIBUF pass.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \mkCondensed
+
+5.2. Analyzing design hierarchy..
+Top module:  \mkCondensed
+Removed 0 unused modules.
+
+6. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1244$612 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1225$609 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1208$606 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1199$604 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1181$602 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1148$599 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1139$598 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1112$597 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1104$596 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1089$594 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1078$593 in module mkCondensed.
+Removed 1 dead cases from process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1069$592 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1069$592 in module mkCondensed.
+Removed 1 dead cases from process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1060$591 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1060$591 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1052$590 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:465$113 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:449$106 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:434$99 in module mkCondensed.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCondensed/src/mkCondensed.v:417$92 in module mkCondensed.
+Removed a total of 2 dead cases.
+
+8. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 18 assignments to connections.
+
+9. Executing PROC_INIT pass (extract init attributes).
+
+10. Executing PROC_ARST pass (detect async resets in processes).
+
+11. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~33 debug messages>
+
+12. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+     1/14: $0\x_is_denorm[0:0]
+     2/14: $0\x_2[7:0]
+     3/14: $0\x2_is_denorm[0:0]
+     4/14: $0\x[7:0]
+     5/14: $0\out_underflow[0:0]
+     6/14: $0\out_term[7:0]
+     7/14: $0\out_overflow[0:0]
+     8/14: $0\out_is_denorm[0:0]
+     9/14: $0\mode[1:0]
+    10/14: $0\exp_underflow[0:0]
+    11/14: $0\exp_term[7:0]
+    12/14: $0\exp_overflow[0:0]
+    13/14: $0\exp_is_denorm[0:0]
+    14/14: $0\bias[5:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1244$612'.
+     1/1: $1\CASE_IF_exp_term_98_BITS_1_TO_0_00_EQ_0b0_01_T_ETC__q15[1:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1225$609'.
+     1/1: $1\CASE_theResult___val_mant221_0b1_IF_bias_0_ULT_ETC__q14[6:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1208$606'.
+     1/1: $1\CASE_IF_IF_exp_is_denorm_03_THEN_IF_0_CONCAT_e_ETC__q13[1:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1199$604'.
+     1/1: $1\CASE_bias_0_0_1_0_IF_bias_0_ULE_32_68_THEN_bia_ETC__q12[4:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1181$602'.
+     1/1: $1\CASE_0_CONCAT_x_BITS_6_TO_2_MINUS_SEXT_bias_0__ETC__q10[1:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1148$599'.
+     1/1: $1\IF_0_CONCAT_exp_term_98_BITS_6_TO_2_08_09_MINU_ETC___d365[4:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1139$598'.
+     1/1: $1\CASE_bias_0_0_1_1_bias_0_BITS_4_TO_0_3_MINUS_1_45__q6[4:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1112$597'.
+     1/1: $1\IF_0_CONCAT_exp_term_98_BITS_6_TO_2_08_09_MINU_ETC___d319[1:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1104$596'.
+     1/1: $1\CASE_bias_0_0b10_1_0b11_0b0__q5[1:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1089$594'.
+     1/1: $1\CASE_0_CONCAT_x_BITS_6_TO_2_MINUS_IF_0_CONCAT__ETC__q4[6:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1078$593'.
+     1/1: $1\CASE_SEXT_IF_x_BITS_1_TO_0_5_EQ_0b11_6_AND_INV_ETC__q3[1:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1069$592'.
+     1/1: $1\_theResult_____1_val_mant__h6210[1:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1060$591'.
+     1/1: $1\_theResult___val_mant__h8055[1:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1052$590'.
+     1/1: $1\_theResult___val_mant__h8010[1:0]
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:465$113'.
+     1/1: $1\out_underflow$D_IN[0:0]$115
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:449$106'.
+     1/1: $1\out_term$D_IN[7:0]$108
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:434$99'.
+     1/1: $1\out_overflow$D_IN[0:0]$101
+Creating decoders for process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:417$92'.
+     1/1: $1\out_is_denorm$D_IN[0:0]$94
+
+13. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\mkCondensed.\CASE_IF_exp_term_98_BITS_1_TO_0_00_EQ_0b0_01_T_ETC__q15' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1244$612'.
+No latch inferred for signal `\mkCondensed.\CASE_theResult___val_mant221_0b1_IF_bias_0_ULT_ETC__q14' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1225$609'.
+No latch inferred for signal `\mkCondensed.\CASE_IF_IF_exp_is_denorm_03_THEN_IF_0_CONCAT_e_ETC__q13' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1208$606'.
+No latch inferred for signal `\mkCondensed.\CASE_bias_0_0_1_0_IF_bias_0_ULE_32_68_THEN_bia_ETC__q12' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1199$604'.
+No latch inferred for signal `\mkCondensed.\CASE_0_CONCAT_x_BITS_6_TO_2_MINUS_SEXT_bias_0__ETC__q10' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1181$602'.
+No latch inferred for signal `\mkCondensed.\IF_0_CONCAT_exp_term_98_BITS_6_TO_2_08_09_MINU_ETC___d365' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1148$599'.
+No latch inferred for signal `\mkCondensed.\CASE_bias_0_0_1_1_bias_0_BITS_4_TO_0_3_MINUS_1_45__q6' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1139$598'.
+No latch inferred for signal `\mkCondensed.\IF_0_CONCAT_exp_term_98_BITS_6_TO_2_08_09_MINU_ETC___d319' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1112$597'.
+No latch inferred for signal `\mkCondensed.\CASE_bias_0_0b10_1_0b11_0b0__q5' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1104$596'.
+No latch inferred for signal `\mkCondensed.\CASE_0_CONCAT_x_BITS_6_TO_2_MINUS_IF_0_CONCAT__ETC__q4' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1089$594'.
+No latch inferred for signal `\mkCondensed.\CASE_SEXT_IF_x_BITS_1_TO_0_5_EQ_0b11_6_AND_INV_ETC__q3' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1078$593'.
+No latch inferred for signal `\mkCondensed.\_theResult_____1_val_mant__h6210' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1069$592'.
+No latch inferred for signal `\mkCondensed.\_theResult___val_mant__h8055' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1060$591'.
+No latch inferred for signal `\mkCondensed.\_theResult___val_mant__h8010' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1052$590'.
+No latch inferred for signal `\mkCondensed.\out_underflow$D_IN' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:465$113'.
+No latch inferred for signal `\mkCondensed.\out_term$D_IN' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:449$106'.
+No latch inferred for signal `\mkCondensed.\out_overflow$D_IN' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:434$99'.
+No latch inferred for signal `\mkCondensed.\out_is_denorm$D_IN' from process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:417$92'.
+
+14. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\mkCondensed.\bias' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$773' with positive edge clock.
+Creating register for signal `\mkCondensed.\exp_is_denorm' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$774' with positive edge clock.
+Creating register for signal `\mkCondensed.\exp_overflow' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$775' with positive edge clock.
+Creating register for signal `\mkCondensed.\exp_term' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$776' with positive edge clock.
+Creating register for signal `\mkCondensed.\exp_underflow' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$777' with positive edge clock.
+Creating register for signal `\mkCondensed.\mode' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$778' with positive edge clock.
+Creating register for signal `\mkCondensed.\out_is_denorm' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$779' with positive edge clock.
+Creating register for signal `\mkCondensed.\out_overflow' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$780' with positive edge clock.
+Creating register for signal `\mkCondensed.\out_term' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$781' with positive edge clock.
+Creating register for signal `\mkCondensed.\out_underflow' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$782' with positive edge clock.
+Creating register for signal `\mkCondensed.\x' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$783' with positive edge clock.
+Creating register for signal `\mkCondensed.\x2_is_denorm' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$784' with positive edge clock.
+Creating register for signal `\mkCondensed.\x_2' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$785' with positive edge clock.
+Creating register for signal `\mkCondensed.\x_is_denorm' using process `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+  created $dff cell `$procdff$786' with positive edge clock.
+
+15. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+16. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 15 empty switches in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1263$615'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1244$612'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1244$612'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1225$609'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1225$609'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1208$606'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1208$606'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1199$604'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1199$604'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1181$602'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1181$602'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1148$599'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1148$599'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1139$598'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1139$598'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1112$597'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1112$597'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1104$596'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1104$596'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1089$594'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1089$594'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1078$593'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1078$593'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1069$592'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1069$592'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1060$591'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1060$591'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1052$590'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:1052$590'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:465$113'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:465$113'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:449$106'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:449$106'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:434$99'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:434$99'.
+Found and cleaned up 1 empty switch in `\mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:417$92'.
+Removing empty process `mkCondensed.$proc$/openlane/designs/mkCondensed/src/mkCondensed.v:417$92'.
+Cleaned up 33 empty switches.
+
+17. Executing CHECK pass (checking for obvious problems).
+Checking module mkCondensed...
+Found and reported 0 problems.
+
+18. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+<suppressed ~122 debug messages>
+
+19. Executing FLATTEN pass (flatten design).
+
+20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 43 unused cells and 283 unused wires.
+<suppressed ~52 debug messages>
+
+22. Executing OPT pass (performing simple optimizations).
+
+22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+<suppressed ~642 debug messages>
+Removed a total of 214 cells.
+
+22.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:338$46: \x_2 -> { 1'0 \x_2 [6:0] }
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~37 debug messages>
+
+22.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+Performed a total of 0 changes.
+
+22.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+22.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+22.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 0 unused cells and 210 unused wires.
+<suppressed ~1 debug messages>
+
+22.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+22.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+22.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~37 debug messages>
+
+22.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+Performed a total of 0 changes.
+
+22.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+22.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+22.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+
+22.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+22.16. Finished OPT passes. (There is nothing left to do.)
+
+23. Executing FSM pass (extract and optimize FSM).
+
+23.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+23.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+23.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+
+23.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+23.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+23.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+23.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+24. Executing OPT pass (performing simple optimizations).
+
+24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+24.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~37 debug messages>
+
+24.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+Performed a total of 0 changes.
+
+24.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+24.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$786 ($dff) from module mkCondensed (D = $procmux$617_Y, Q = \x_is_denorm, rval = 1'1).
+Adding EN signal on $auto$ff.cc:266:slice$809 ($sdff) from module mkCondensed (D = \x_is_denorm$D_IN, Q = \x_is_denorm).
+Adding SRST signal on $procdff$785 ($dff) from module mkCondensed (D = $procmux$622_Y, Q = \x_2, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$811 ($sdff) from module mkCondensed (D = \x, Q = \x_2).
+Adding SRST signal on $procdff$784 ($dff) from module mkCondensed (D = $procmux$627_Y, Q = \x2_is_denorm, rval = 1'1).
+Adding EN signal on $auto$ff.cc:266:slice$813 ($sdff) from module mkCondensed (D = \x_is_denorm, Q = \x2_is_denorm).
+Adding SRST signal on $procdff$783 ($dff) from module mkCondensed (D = $procmux$632_Y, Q = \x, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$815 ($sdff) from module mkCondensed (D = \set_inp_val, Q = \x).
+Adding SRST signal on $procdff$782 ($dff) from module mkCondensed (D = \out_underflow$D_IN, Q = \out_underflow, rval = 1'0).
+Adding SRST signal on $procdff$781 ($dff) from module mkCondensed (D = \out_term$D_IN, Q = \out_term, rval = 8'00000000).
+Adding SRST signal on $procdff$780 ($dff) from module mkCondensed (D = \out_overflow$D_IN, Q = \out_overflow, rval = 1'0).
+Adding SRST signal on $procdff$779 ($dff) from module mkCondensed (D = \out_is_denorm$D_IN, Q = \out_is_denorm, rval = 1'1).
+Adding SRST signal on $procdff$778 ($dff) from module mkCondensed (D = $procmux$657_Y, Q = \mode, rval = 2'00).
+Adding EN signal on $auto$ff.cc:266:slice$821 ($sdff) from module mkCondensed (D = \set_mode_mode, Q = \mode).
+Adding SRST signal on $procdff$776 ($dff) from module mkCondensed (D = $procmux$667_Y, Q = \exp_term, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$823 ($sdff) from module mkCondensed (D = \exp_term$D_IN, Q = \exp_term).
+Adding SRST signal on $procdff$774 ($dff) from module mkCondensed (D = $procmux$677_Y, Q = \exp_is_denorm, rval = 1'1).
+Adding EN signal on $auto$ff.cc:266:slice$825 ($sdff) from module mkCondensed (D = \exp_is_denorm$D_IN, Q = \exp_is_denorm).
+Adding SRST signal on $procdff$773 ($dff) from module mkCondensed (D = $procmux$682_Y, Q = \bias, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:266:slice$827 ($sdff) from module mkCondensed (D = \set_bias_bias_val, Q = \bias).
+
+24.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 20 unused cells and 20 unused wires.
+<suppressed ~21 debug messages>
+
+24.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+24.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+24.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+24.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+Performed a total of 0 changes.
+
+24.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+24.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+24.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+
+24.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+24.16. Finished OPT passes. (There is nothing left to do.)
+
+25. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 7) from port B of cell mkCondensed.$ne$/openlane/designs/mkCondensed/src/mkCondensed.v:297$4 ($ne).
+Removed top 5 bits (of 6) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:310$13 ($eq).
+Removed top 5 bits (of 6) from port B of cell mkCondensed.$ne$/openlane/designs/mkCondensed/src/mkCondensed.v:326$27 ($ne).
+Removed top 1 bits (of 2) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:425$96 ($eq).
+Removed top 6 bits (of 7) from port B of cell mkCondensed.$ne$/openlane/designs/mkCondensed/src/mkCondensed.v:500$129 ($ne).
+Removed top 5 bits (of 7) from port B of cell mkCondensed.$ne$/openlane/designs/mkCondensed/src/mkCondensed.v:502$130 ($ne).
+Removed top 5 bits (of 7) from port B of cell mkCondensed.$ne$/openlane/designs/mkCondensed/src/mkCondensed.v:504$132 ($ne).
+Removed top 6 bits (of 7) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:530$147 ($eq).
+Removed top 5 bits (of 7) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:532$148 ($eq).
+Removed top 5 bits (of 7) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:534$150 ($eq).
+Removed top 6 bits (of 7) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:548$163 ($eq).
+Removed top 1 bits (of 2) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:554$172 ($eq).
+Removed top 5 bits (of 7) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:561$181 ($eq).
+Removed top 5 bits (of 7) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:569$188 ($eq).
+Removed top 4 bits (of 7) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:593$206 ($eq).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:597$212 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:593$213 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:589$214 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:585$215 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:581$216 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:577$217 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:573$218 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:569$219 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:565$220 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:558$221 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:553$222 ($mux).
+Removed top 2 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:544$223 ($mux).
+Removed top 1 bits (of 7) from port B of cell mkCondensed.$le$/openlane/designs/mkCondensed/src/mkCondensed.v:657$297 ($le).
+Removed top 4 bits (of 5) from port B of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:672$306 ($sub).
+Removed top 4 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:735$368 ($mux).
+Removed top 6 bits (of 7) from port B of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:742$371 ($sub).
+Removed top 4 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:758$377 ($mux).
+Removed top 4 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:788$402 ($mux).
+Removed top 1 bits (of 6) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:802$411 ($eq).
+Removed top 1 bits (of 6) from port B of cell mkCondensed.$lt$/openlane/designs/mkCondensed/src/mkCondensed.v:814$418 ($lt).
+Removed top 3 bits (of 5) from port B of cell mkCondensed.$add$/openlane/designs/mkCondensed/src/mkCondensed.v:814$419 ($add).
+Removed top 1 bits (of 6) from port B of cell mkCondensed.$lt$/openlane/designs/mkCondensed/src/mkCondensed.v:816$421 ($lt).
+Removed top 6 bits (of 7) from port B of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:827$426 ($sub).
+Removed top 1 bits (of 6) from port B of cell mkCondensed.$lt$/openlane/designs/mkCondensed/src/mkCondensed.v:831$429 ($lt).
+Removed top 2 bits (of 5) from port B of cell mkCondensed.$add$/openlane/designs/mkCondensed/src/mkCondensed.v:831$430 ($add).
+Removed top 4 bits (of 5) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:854$448 ($mux).
+Removed top 4 bits (of 5) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:856$451 ($mux).
+Removed top 1 bits (of 2) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:892$476 ($eq).
+Removed top 6 bits (of 7) from port A of cell mkCondensed.$add$/openlane/designs/mkCondensed/src/mkCondensed.v:896$481 ($add).
+Removed top 2 bits (of 7) from port B of cell mkCondensed.$add$/openlane/designs/mkCondensed/src/mkCondensed.v:896$481 ($add).
+Removed top 1 bits (of 7) from port Y of cell mkCondensed.$add$/openlane/designs/mkCondensed/src/mkCondensed.v:896$481 ($add).
+Removed top 6 bits (of 7) from port A of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:904$483 ($sub).
+Removed top 4 bits (of 7) from port B of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:904$483 ($sub).
+Removed top 3 bits (of 7) from port Y of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:904$483 ($sub).
+Removed top 2 bits (of 7) from port B of cell mkCondensed.$add$/openlane/designs/mkCondensed/src/mkCondensed.v:904$484 ($add).
+Removed top 2 bits (of 7) from port A of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:915$486 ($sub).
+Removed top 1 bits (of 7) from port B of cell mkCondensed.$lt$/openlane/designs/mkCondensed/src/mkCondensed.v:917$488 ($lt).
+Removed top 1 bits (of 2) from port B of cell mkCondensed.$ne$/openlane/designs/mkCondensed/src/mkCondensed.v:931$499 ($ne).
+Removed top 5 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:935$508 ($mux).
+Removed top 5 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:926$509 ($mux).
+Removed top 2 bits (of 7) from port A of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:925$510 ($sub).
+Removed top 5 bits (of 7) from port B of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:925$510 ($sub).
+Removed top 1 bits (of 7) from port Y of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:925$510 ($sub).
+Removed top 1 bits (of 7) from port B of cell mkCondensed.$le$/openlane/designs/mkCondensed/src/mkCondensed.v:940$512 ($le).
+Removed top 1 bits (of 7) from port B of cell mkCondensed.$le$/openlane/designs/mkCondensed/src/mkCondensed.v:943$514 ($le).
+Removed top 2 bits (of 7) from port A of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:952$519 ($sub).
+Removed top 4 bits (of 5) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:954$520 ($eq).
+Removed top 4 bits (of 5) from port B of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:1000$556 ($sub).
+Removed top 4 bits (of 5) from port B of cell mkCondensed.$add$/openlane/designs/mkCondensed/src/mkCondensed.v:1001$557 ($add).
+Removed top 3 bits (of 5) from port B of cell mkCondensed.$add$/openlane/designs/mkCondensed/src/mkCondensed.v:1002$558 ($add).
+Removed top 1 bits (of 6) from port B of cell mkCondensed.$le$/openlane/designs/mkCondensed/src/mkCondensed.v:1003$559 ($le).
+Removed top 2 bits (of 6) from port B of cell mkCondensed.$lt$/openlane/designs/mkCondensed/src/mkCondensed.v:1005$561 ($lt).
+Removed top 1 bits (of 6) from port B of cell mkCondensed.$lt$/openlane/designs/mkCondensed/src/mkCondensed.v:1006$562 ($lt).
+Removed top 5 bits (of 6) from port B of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:1007$563 ($sub).
+Removed top 1 bits (of 6) from port Y of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:1007$563 ($sub).
+Removed top 1 bits (of 6) from port A of cell mkCondensed.$sub$/openlane/designs/mkCondensed/src/mkCondensed.v:1007$563 ($sub).
+Removed top 1 bits (of 7) from port A of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:1021$572 ($eq).
+Removed top 1 bits (of 7) from port B of cell mkCondensed.$eq$/openlane/designs/mkCondensed/src/mkCondensed.v:1021$572 ($eq).
+Removed top 1 bits (of 2) from port B of cell mkCondensed.$add$/openlane/designs/mkCondensed/src/mkCondensed.v:1034$577 ($add).
+Removed top 4 bits (of 7) from mux cell mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1095$595 ($mux).
+Removed top 1 bits (of 2) from port B of cell mkCondensed.$procmux$739_CMP0 ($eq).
+Removed top 4 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1095$595_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:553$222_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:558$221_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:565$220_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:569$219_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:573$218_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:577$217_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:581$216_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:585$215_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:589$214_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:593$213_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:597$212_Y.
+Removed top 4 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:788$402_Y.
+Removed top 5 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:926$509_Y.
+Removed top 5 bits (of 7) from wire mkCondensed.$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:935$508_Y.
+Removed top 2 bits (of 7) from wire mkCondensed.IF_0_CONCAT_x_BITS_6_TO_2_MINUS_SEXT_bias_0_1__ETC___d131.
+Removed top 4 bits (of 5) from wire mkCondensed.IF_x641_AND_y642_THEN_1_ELSE_0__q1.
+Removed top 1 bits (of 7) from wire mkCondensed.SEXT_IF_NOT_exp_term_98_BITS_1_TO_0_00_EQ_0b0__ETC___d210.
+Removed top 5 bits (of 7) from wire mkCondensed._0_CONCAT_IF_x_is_denorm_THEN_0b0_ELSE_IF_SEXT__ETC___d245.
+Removed top 1 bits (of 2) from wire mkCondensed._theResult___val_mant__h6086.
+Removed top 1 bits (of 2) from wire mkCondensed._theResult___val_mant__h6102.
+Removed top 1 bits (of 6) from wire mkCondensed.bias_MINUS_1__q11.
+Removed top 1 bits (of 2) from wire mkCondensed.res___1_val_mant__h5279.
+Removed top 1 bits (of 2) from wire mkCondensed.res___1_val_mant__h7007.
+Removed top 1 bits (of 2) from wire mkCondensed.res_val_mant__h7208.
+
+26. Executing PEEPOPT pass (run peephole optimizers).
+
+27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 0 unused cells and 25 unused wires.
+<suppressed ~1 debug messages>
+
+28. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module mkCondensed:
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1001$557 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1002$558 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1033$575 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1034$577 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1240$610 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:740$373 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:774$394 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:807$414 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:811$416 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:814$419 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:831$430 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:896$481 ($add).
+  creating $macc model for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:904$484 ($add).
+  creating $macc model for $neg$/openlane/designs/mkCondensed/src/mkCondensed.v:884$470 ($neg).
+  creating $macc model for $neg$/openlane/designs/mkCondensed/src/mkCondensed.v:886$471 ($neg).
+  creating $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:1000$556 ($sub).
+  creating $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:1007$563 ($sub).
+  creating $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:672$306 ($sub).
+  creating $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:742$371 ($sub).
+  creating $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:827$426 ($sub).
+  creating $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:900$482 ($sub).
+  creating $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:904$483 ($sub).
+  creating $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:915$486 ($sub).
+  creating $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:925$510 ($sub).
+  creating $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:952$519 ($sub).
+  merging $macc model for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:900$482 into $neg$/openlane/designs/mkCondensed/src/mkCondensed.v:886$471.
+  creating $alu model for $macc $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:925$510.
+  creating $alu model for $macc $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:915$486.
+  creating $alu model for $macc $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:904$483.
+  creating $alu model for $macc $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:952$519.
+  creating $alu model for $macc $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:827$426.
+  creating $alu model for $macc $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:742$371.
+  creating $alu model for $macc $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:672$306.
+  creating $alu model for $macc $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:1007$563.
+  creating $alu model for $macc $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:1000$556.
+  creating $alu model for $macc $neg$/openlane/designs/mkCondensed/src/mkCondensed.v:886$471.
+  creating $alu model for $macc $neg$/openlane/designs/mkCondensed/src/mkCondensed.v:884$470.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:904$484.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:896$481.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:831$430.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:814$419.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:811$416.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:807$414.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:774$394.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:740$373.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1240$610.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1034$577.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1033$575.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1002$558.
+  creating $alu model for $macc $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1001$557.
+  creating $alu model for $ge$/openlane/designs/mkCondensed/src/mkCondensed.v:621$251 ($ge): new $alu
+  creating $alu model for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:1003$559 ($le): new $alu
+  creating $alu model for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:1004$560 ($le): new $alu
+  creating $alu model for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:657$297 ($le): new $alu
+  creating $alu model for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:921$490 ($le): new $alu
+  creating $alu model for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:940$512 ($le): new $alu
+  creating $alu model for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:943$514 ($le): new $alu
+  creating $alu model for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:1005$561 ($lt): new $alu
+  creating $alu model for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:1006$562 ($lt): new $alu
+  creating $alu model for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:814$418 ($lt): new $alu
+  creating $alu model for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:816$421 ($lt): new $alu
+  creating $alu model for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:831$429 ($lt): new $alu
+  creating $alu model for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:917$488 ($lt): new $alu
+  creating $alu model for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:946$516 ($lt): new $alu
+  creating $alu model for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:949$518 ($lt): new $alu
+  creating $alu model for $eq$/openlane/designs/mkCondensed/src/mkCondensed.v:802$411 ($eq): merged with $le$/openlane/designs/mkCondensed/src/mkCondensed.v:1003$559.
+  creating $alu cell for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:949$518: $auto$alumacc.cc:485:replace_alu$869
+  creating $alu cell for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:946$516: $auto$alumacc.cc:485:replace_alu$880
+  creating $alu cell for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:917$488: $auto$alumacc.cc:485:replace_alu$891
+  creating $alu cell for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:831$429: $auto$alumacc.cc:485:replace_alu$902
+  creating $alu cell for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:816$421: $auto$alumacc.cc:485:replace_alu$913
+  creating $alu cell for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:814$418: $auto$alumacc.cc:485:replace_alu$924
+  creating $alu cell for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:1006$562: $auto$alumacc.cc:485:replace_alu$935
+  creating $alu cell for $lt$/openlane/designs/mkCondensed/src/mkCondensed.v:1005$561: $auto$alumacc.cc:485:replace_alu$946
+  creating $alu cell for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:943$514: $auto$alumacc.cc:485:replace_alu$957
+  creating $alu cell for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:940$512: $auto$alumacc.cc:485:replace_alu$970
+  creating $alu cell for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:921$490: $auto$alumacc.cc:485:replace_alu$983
+  creating $alu cell for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:657$297: $auto$alumacc.cc:485:replace_alu$996
+  creating $alu cell for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:1004$560: $auto$alumacc.cc:485:replace_alu$1009
+  creating $alu cell for $le$/openlane/designs/mkCondensed/src/mkCondensed.v:1003$559, $eq$/openlane/designs/mkCondensed/src/mkCondensed.v:802$411: $auto$alumacc.cc:485:replace_alu$1022
+  creating $alu cell for $ge$/openlane/designs/mkCondensed/src/mkCondensed.v:621$251: $auto$alumacc.cc:485:replace_alu$1035
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1001$557: $auto$alumacc.cc:485:replace_alu$1044
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1002$558: $auto$alumacc.cc:485:replace_alu$1047
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1033$575: $auto$alumacc.cc:485:replace_alu$1050
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1034$577: $auto$alumacc.cc:485:replace_alu$1053
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1240$610: $auto$alumacc.cc:485:replace_alu$1056
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:740$373: $auto$alumacc.cc:485:replace_alu$1059
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:774$394: $auto$alumacc.cc:485:replace_alu$1062
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:807$414: $auto$alumacc.cc:485:replace_alu$1065
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:811$416: $auto$alumacc.cc:485:replace_alu$1068
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:814$419: $auto$alumacc.cc:485:replace_alu$1071
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:831$430: $auto$alumacc.cc:485:replace_alu$1074
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:896$481: $auto$alumacc.cc:485:replace_alu$1077
+  creating $alu cell for $add$/openlane/designs/mkCondensed/src/mkCondensed.v:904$484: $auto$alumacc.cc:485:replace_alu$1080
+  creating $alu cell for $neg$/openlane/designs/mkCondensed/src/mkCondensed.v:884$470: $auto$alumacc.cc:485:replace_alu$1083
+  creating $alu cell for $neg$/openlane/designs/mkCondensed/src/mkCondensed.v:886$471: $auto$alumacc.cc:485:replace_alu$1086
+  creating $alu cell for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:1000$556: $auto$alumacc.cc:485:replace_alu$1089
+  creating $alu cell for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:1007$563: $auto$alumacc.cc:485:replace_alu$1092
+  creating $alu cell for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:672$306: $auto$alumacc.cc:485:replace_alu$1095
+  creating $alu cell for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:742$371: $auto$alumacc.cc:485:replace_alu$1098
+  creating $alu cell for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:827$426: $auto$alumacc.cc:485:replace_alu$1101
+  creating $alu cell for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:952$519: $auto$alumacc.cc:485:replace_alu$1104
+  creating $alu cell for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:904$483: $auto$alumacc.cc:485:replace_alu$1107
+  creating $alu cell for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:915$486: $auto$alumacc.cc:485:replace_alu$1110
+  creating $alu cell for $sub$/openlane/designs/mkCondensed/src/mkCondensed.v:925$510: $auto$alumacc.cc:485:replace_alu$1113
+  created 39 $alu and 0 $macc cells.
+
+29. Executing SHARE pass (SAT-based resource sharing).
+
+30. Executing OPT pass (performing simple optimizations).
+
+30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+<suppressed ~16 debug messages>
+
+30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+<suppressed ~5 debug messages>
+Removed a total of 1 cells.
+
+30.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+Performed a total of 0 changes.
+
+30.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+30.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 8 unused cells and 30 unused wires.
+<suppressed ~14 debug messages>
+
+30.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+30.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+30.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+30.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+Performed a total of 0 changes.
+
+30.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+30.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+30.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+
+30.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+30.16. Finished OPT passes. (There is nothing left to do.)
+
+31. Executing MEMORY pass.
+
+31.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+31.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+31.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+31.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+31.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+31.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+
+31.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+31.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+31.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+
+31.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+
+33. Executing OPT pass (performing simple optimizations).
+
+33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+<suppressed ~21 debug messages>
+
+33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+<suppressed ~32 debug messages>
+Removed a total of 10 cells.
+
+33.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 13 unused cells and 26 unused wires.
+<suppressed ~14 debug messages>
+
+33.5. Finished fast OPT passes.
+
+34. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+35. Executing OPT pass (performing simple optimizations).
+
+35.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+35.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+35.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+35.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1095$595:
+      Old ports: A=3'011, B=3'100, Y=$auto$wreduce.cc:461:run$829 [2:0]
+      New ports: A=2'01, B=2'10, Y={ $auto$wreduce.cc:461:run$829 [2] $auto$wreduce.cc:461:run$829 [0] }
+      New connections: $auto$wreduce.cc:461:run$829 [1] = $auto$wreduce.cc:461:run$829 [0]
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1239$611:
+      Old ports: A={ $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1240$610_Y 2'01 }, B=7'1111111, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1239$611_Y
+      New ports: A={ $add$/openlane/designs/mkCondensed/src/mkCondensed.v:1240$610_Y 1'0 }, B=6'111111, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1239$611_Y [6:1]
+      New connections: $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1239$611_Y [0] = 1'1
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:597$212:
+      Old ports: A=5'00000, B=5'11000, Y=$auto$wreduce.cc:461:run$840 [4:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:461:run$840 [3]
+      New connections: { $auto$wreduce.cc:461:run$840 [4] $auto$wreduce.cc:461:run$840 [2:0] } = { $auto$wreduce.cc:461:run$840 [3] 3'000 }
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:621$271:
+      Old ports: A=2'00, B=2'11, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:621$271_Y
+      New ports: A=1'0, B=1'1, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:621$271_Y [0]
+      New connections: $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:621$271_Y [1] = $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:621$271_Y [0]
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:684$333:
+      Old ports: A=2'00, B=2'10, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:684$333_Y
+      New ports: A=1'0, B=1'1, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:684$333_Y [1]
+      New connections: $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:684$333_Y [0] = 1'0
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:735$368:
+      Old ports: A=3'011, B=3'100, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:735$368_Y [2:0]
+      New ports: A=2'01, B=2'10, Y={ $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:735$368_Y [2] $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:735$368_Y [0] }
+      New connections: $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:735$368_Y [1] = $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:735$368_Y [0]
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:758$377:
+      Old ports: A=3'011, B=3'100, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:758$377_Y [2:0]
+      New ports: A=2'01, B=2'10, Y={ $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:758$377_Y [2] $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:758$377_Y [0] }
+      New connections: $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:758$377_Y [1] = $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:758$377_Y [0]
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:788$402:
+      Old ports: A=3'011, B=3'100, Y=$auto$wreduce.cc:461:run$841 [2:0]
+      New ports: A=2'01, B=2'10, Y={ $auto$wreduce.cc:461:run$841 [2] $auto$wreduce.cc:461:run$841 [0] }
+      New connections: $auto$wreduce.cc:461:run$841 [1] = $auto$wreduce.cc:461:run$841 [0]
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:806$415:
+      Old ports: A={ $add$/openlane/designs/mkCondensed/src/mkCondensed.v:807$414_Y 2'00 }, B=7'1111111, Y=\IF_bias_0_ULT_15_22_THEN_bias_0_BITS_4_TO_0_3__ETC___d326
+      New ports: A={ $add$/openlane/designs/mkCondensed/src/mkCondensed.v:807$414_Y 1'0 }, B=6'111111, Y={ \IF_bias_0_ULT_15_22_THEN_bias_0_BITS_4_TO_0_3__ETC___d326 [6:2] \IF_bias_0_ULT_15_22_THEN_bias_0_BITS_4_TO_0_3__ETC___d326 [0] }
+      New connections: \IF_bias_0_ULT_15_22_THEN_bias_0_BITS_4_TO_0_3__ETC___d326 [1] = \IF_bias_0_ULT_15_22_THEN_bias_0_BITS_4_TO_0_3__ETC___d326 [0]
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:810$417:
+      Old ports: A={ $add$/openlane/designs/mkCondensed/src/mkCondensed.v:811$416_Y 2'00 }, B=7'1111111, Y=\IF_bias_0_ULT_16_28_THEN_bias_0_BITS_4_TO_0_3__ETC___d332
+      New ports: A={ $add$/openlane/designs/mkCondensed/src/mkCondensed.v:811$416_Y 1'0 }, B=6'111111, Y={ \IF_bias_0_ULT_16_28_THEN_bias_0_BITS_4_TO_0_3__ETC___d332 [6:2] \IF_bias_0_ULT_16_28_THEN_bias_0_BITS_4_TO_0_3__ETC___d332 [0] }
+      New connections: \IF_bias_0_ULT_16_28_THEN_bias_0_BITS_4_TO_0_3__ETC___d332 [1] = \IF_bias_0_ULT_16_28_THEN_bias_0_BITS_4_TO_0_3__ETC___d332 [0]
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:842$438:
+      Old ports: A=2'10, B=2'00, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:842$438_Y
+      New ports: A=1'1, B=1'0, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:842$438_Y [1]
+      New connections: $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:842$438_Y [0] = 1'0
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:851$444:
+      Old ports: A=2'00, B=2'11, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:851$444_Y
+      New ports: A=1'0, B=1'1, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:851$444_Y [0]
+      New connections: $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:851$444_Y [1] = $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:851$444_Y [0]
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:935$508:
+      Old ports: A=2'00, B=2'10, Y=$auto$wreduce.cc:461:run$843 [1:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:461:run$843 [1]
+      New connections: $auto$wreduce.cc:461:run$843 [0] = 1'0
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:978$534:
+      Old ports: A=2'00, B=2'11, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:978$534_Y
+      New ports: A=1'0, B=1'1, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:978$534_Y [0]
+      New connections: $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:978$534_Y [1] = $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:978$534_Y [0]
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:986$545:
+      Old ports: A=2'00, B=2'11, Y=\_theResult___val_mant__h8131
+      New ports: A=1'0, B=1'1, Y=\_theResult___val_mant__h8131 [0]
+      New connections: \_theResult___val_mant__h8131 [1] = \_theResult___val_mant__h8131 [0]
+  Optimizing cells in module \mkCondensed.
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1194$603:
+      Old ports: A=2'00, B=\_theResult___val_mant__h8131, Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1194$603_Y
+      New ports: A=1'0, B=\_theResult___val_mant__h8131 [0], Y=$ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1194$603_Y [0]
+      New connections: $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1194$603_Y [1] = $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:1194$603_Y [0]
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:593$213:
+      Old ports: A=$auto$wreduce.cc:461:run$840 [4:0], B=5'10011, Y=$auto$wreduce.cc:461:run$839 [4:0]
+      New ports: A={ $auto$wreduce.cc:461:run$840 [3] $auto$wreduce.cc:461:run$840 [3] 1'0 }, B=3'101, Y={ $auto$wreduce.cc:461:run$839 [4:3] $auto$wreduce.cc:461:run$839 [0] }
+      New connections: $auto$wreduce.cc:461:run$839 [2:1] = { 1'0 $auto$wreduce.cc:461:run$839 [0] }
+  Optimizing cells in module \mkCondensed.
+    Consolidated identical input bits for $mux cell $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:589$214:
+      Old ports: A=$auto$wreduce.cc:461:run$839 [4:0], B=5'10001, Y=$auto$wreduce.cc:461:run$838 [4:0]
+      New ports: A={ $auto$wreduce.cc:461:run$839 [4:3] $auto$wreduce.cc:461:run$839 [0] $auto$wreduce.cc:461:run$839 [0] }, B=4'1001, Y={ $auto$wreduce.cc:461:run$838 [4:3] $auto$wreduce.cc:461:run$838 [1:0] }
+      New connections: $auto$wreduce.cc:461:run$838 [2] = 1'0
+  Optimizing cells in module \mkCondensed.
+Performed a total of 18 changes.
+
+35.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+35.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $mux $ternary$/openlane/designs/mkCondensed/src/mkCondensed.v:385$70 in front of them:
+        $logic_or$/openlane/designs/mkCondensed/src/mkCondensed.v:1046$587
+        $logic_or$/openlane/designs/mkCondensed/src/mkCondensed.v:1041$584
+
+35.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+35.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
+
+35.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+<suppressed ~10 debug messages>
+
+35.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+35.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+Performed a total of 0 changes.
+
+35.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+35.14. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $mux $auto$opt_share.cc:244:merge_operators$1168 in front of them:
+        $logic_and$/openlane/designs/mkCondensed/src/mkCondensed.v:1047$586
+        $logic_and$/openlane/designs/mkCondensed/src/mkCondensed.v:1042$583
+
+35.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+35.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+35.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+<suppressed ~1 debug messages>
+
+35.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+35.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+Performed a total of 0 changes.
+
+35.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+35.22. Executing OPT_SHARE pass.
+
+35.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+35.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+35.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+35.26. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+35.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+Performed a total of 0 changes.
+
+35.29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+35.30. Executing OPT_SHARE pass.
+
+35.31. Executing OPT_DFF pass (perform DFF optimizations).
+
+35.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+
+35.33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+35.34. Finished OPT passes. (There is nothing left to do.)
+
+36. Executing TECHMAP pass (map to technology primitives).
+
+36.1. Executing Verilog-2005 frontend: /build/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/build/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+36.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $sdff.
+Using template $paramod$d0e4c797aa680bb54c964a262954ce9f5bfee2c5\_90_alu for cells of type $alu.
+Using template $paramod$dbcdc7e8aa1a4080cea2deda6fdc8772064f4d90\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_90_alu for cells of type $alu.
+Using template $paramod$00298f3f8094950cb9a5ff2fda48d0d8bde8806c\_90_alu for cells of type $alu.
+Using template $paramod$10ed987432f06055e5279101f9ec60a49861b43c\_90_alu for cells of type $alu.
+Using template $paramod$38e8498ccdc425801fe5312e427e3cf0d9089c58\_90_alu for cells of type $alu.
+Using template $paramod$b18e16801adf491a64caa0542270798e5d4ac6b6\_90_alu for cells of type $alu.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using template $paramod$3ac6e4268d0279df14823f25676acf685165517e\_90_alu for cells of type $alu.
+Using template $paramod$e04283ca12514baf3d204c6994bec8f178dd89f8\_90_alu for cells of type $alu.
+Using template $paramod$3ef7d3dd227da7627a99c5e5a6a4deb817573e39\_90_alu for cells of type $alu.
+Using template $paramod$83dd457849c736323edf2edb15923eb27f99c683\_90_alu for cells of type $alu.
+Using template $paramod$5e23d2e0f07f5403e3d2c5b606bab0c16e4174c1\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod$7e708ae28ab761f11d0fb59d3ffc72f6a4baf5d9\_90_alu for cells of type $alu.
+Using template $paramod$dc04b7d98e503a7bab16fce2df70e6e2c5ca34d6\_90_alu for cells of type $alu.
+Using template $paramod$e23c72610957bd76b0654139c354e282891d4e8f\_90_alu for cells of type $alu.
+Using template $paramod$c4905825bb8ecc38b98eb4167e8b007447af7884\_90_alu for cells of type $alu.
+Using template $paramod$adbaf76fa5a3091a329503792521395f8ff4d1a4\_90_alu for cells of type $alu.
+Using template $paramod$d1615bf4e5e328245ffd1550e5fe105901cda77b\_90_alu for cells of type $alu.
+Using template $paramod$175e67c02b86e96b1288b9dc100122520d7240d8\_90_alu for cells of type $alu.
+Using template $paramod$521ce43182eecb9f60c72393a788160d2c356bf5\_90_pmux for cells of type $pmux.
+Using template $paramod$b756e651b7db7aeb455331d9a2df073db93fcc2e\_90_pmux for cells of type $pmux.
+Using template $paramod$77db613179eb70c5e4e5c5aca72d602a7c6017b6\_90_pmux for cells of type $pmux.
+Using template $paramod$70d30c21ff772b34d0d1da2801fbd781dc3c70e4\_90_pmux for cells of type $pmux.
+Using template $paramod$97565c3687be688407d1272a293bd9d0ae6852dc\_90_pmux for cells of type $pmux.
+Using template $paramod$9174beaf0f44375ab754acac146039d243ace676\_90_pmux for cells of type $pmux.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using template $paramod$ee721315a7b0169d82611b9aea01747035b97792\_90_pmux for cells of type $pmux.
+Using template $paramod$d629d85c8826a74239b9178d1930215a43b0ceb0\_90_pmux for cells of type $pmux.
+Using template $paramod$b3b6ac92d800c6f07aa48f510f923d86a674e5a7\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000111 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000110 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000001 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~2780 debug messages>
+
+37. Executing OPT pass (performing simple optimizations).
+
+37.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+<suppressed ~1350 debug messages>
+
+37.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+<suppressed ~1548 debug messages>
+Removed a total of 516 cells.
+
+37.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+37.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 138 unused cells and 1981 unused wires.
+<suppressed ~139 debug messages>
+
+37.5. Finished fast OPT passes.
+
+38. Executing ABC pass (technology mapping using ABC).
+
+38.1. Extracting gate netlist of module `\mkCondensed' to `<abc-temp-dir>/input.blif'..
+Extracted 1520 gates and 1562 wires to a netlist network with 40 inputs and 22 outputs.
+
+38.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+38.1.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:       53
+ABC RESULTS:              XNOR cells:       15
+ABC RESULTS:               XOR cells:      111
+ABC RESULTS:             ORNOT cells:       65
+ABC RESULTS:              NAND cells:       51
+ABC RESULTS:               MUX cells:      212
+ABC RESULTS:               AND cells:       50
+ABC RESULTS:                OR cells:      245
+ABC RESULTS:               NOR cells:       98
+ABC RESULTS:            ANDNOT cells:      400
+ABC RESULTS:        internal signals:     1500
+ABC RESULTS:           input signals:       40
+ABC RESULTS:          output signals:       22
+Removing temp directory.
+
+39. Executing OPT pass (performing simple optimizations).
+
+39.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+<suppressed ~58 debug messages>
+
+39.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+<suppressed ~72 debug messages>
+Removed a total of 24 cells.
+
+39.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+39.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 1 unused cells and 836 unused wires.
+<suppressed ~107 debug messages>
+
+39.5. Finished fast OPT passes.
+
+40. Executing HIERARCHY pass (managing design hierarchy).
+
+40.1. Analyzing design hierarchy..
+Top module:  \mkCondensed
+
+40.2. Analyzing design hierarchy..
+Top module:  \mkCondensed
+Removed 0 unused modules.
+
+41. Printing statistics.
+
+=== mkCondensed ===
+
+   Number of wires:               1316
+   Number of wire bits:           1467
+   Number of public wires:          63
+   Number of public wire bits:     214
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1321
+     $_ANDNOT_                     395
+     $_AND_                         45
+     $_MUX_                        211
+     $_NAND_                        51
+     $_NOR_                         91
+     $_NOT_                         52
+     $_ORNOT_                       64
+     $_OR_                         242
+     $_SDFFE_PN0P_                  32
+     $_SDFFE_PN1P_                   3
+     $_SDFF_PN0_                    10
+     $_SDFF_PN1_                     1
+     $_XNOR_                        15
+     $_XOR_                        109
+
+42. Executing CHECK pass (checking for obvious problems).
+Checking module mkCondensed...
+Found and reported 0 problems.
+
+43. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/mkCondensed/runs/RUN_2023.12.11_04.13.36/tmp/synthesis/post_techmap.dot'.
+Dumping module mkCondensed to page 1.
+
+44. Executing SHARE pass (SAT-based resource sharing).
+
+45. Executing OPT pass (performing simple optimizations).
+
+45.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+45.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+45.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCondensed..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+45.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCondensed.
+Performed a total of 0 changes.
+
+45.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCondensed'.
+Removed a total of 0 cells.
+
+45.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+45.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+
+45.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCondensed.
+
+45.9. Finished OPT passes. (There is nothing left to do.)
+
+46. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 0 unused cells and 29 unused wires.
+<suppressed ~29 debug messages>
+
+47. Printing statistics.
+
+=== mkCondensed ===
+
+   Number of wires:               1287
+   Number of wire bits:           1359
+   Number of public wires:          34
+   Number of public wire bits:     106
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1321
+     $_ANDNOT_                     395
+     $_AND_                         45
+     $_MUX_                        211
+     $_NAND_                        51
+     $_NOR_                         91
+     $_NOT_                         52
+     $_ORNOT_                       64
+     $_OR_                         242
+     $_SDFFE_PN0P_                  32
+     $_SDFFE_PN1P_                   3
+     $_SDFF_PN0_                    10
+     $_SDFF_PN1_                     1
+     $_XNOR_                        15
+     $_XOR_                        109
+
+mapping tbuf
+
+48. Executing TECHMAP pass (map to technology primitives).
+
+48.1. Executing Verilog-2005 frontend: /home/yuk/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/yuk/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+48.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+49. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+50. Executing TECHMAP pass (map to technology primitives).
+
+50.1. Executing Verilog-2005 frontend: /home/yuk/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/yuk/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+50.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+51. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+52. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+52.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\mkCondensed':
+  mapped 46 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_2 cells.
+
+53. Printing statistics.
+
+=== mkCondensed ===
+
+   Number of wires:               1368
+   Number of wire bits:           1440
+   Number of public wires:          34
+   Number of public wire bits:     106
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1402
+     $_ANDNOT_                     395
+     $_AND_                         45
+     $_MUX_                        292
+     $_NAND_                        51
+     $_NOR_                         91
+     $_NOT_                         52
+     $_ORNOT_                       64
+     $_OR_                         242
+     $_XNOR_                        15
+     $_XOR_                        109
+     sky130_fd_sc_hd__dfxtp_2       46
+
+[INFO]: USING STRATEGY AREA 0
+
+54. Executing ABC pass (technology mapping using ABC).
+
+54.1. Extracting gate netlist of module `\mkCondensed' to `/tmp/yosys-abc-rNml31/input.blif'..
+Extracted 1356 gates and 1413 wires to a netlist network with 55 inputs and 46 outputs.
+
+54.1.1. Executing ABC.
+Running ABC command: "/build/bin/yosys-abc" -s -f /tmp/yosys-abc-rNml31/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-rNml31/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-rNml31/input.blif 
+ABC: + read_lib -w /openlane/designs/mkCondensed/runs/RUN_2023.12.11_04.13.36/tmp/synthesis/trimmed.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.08 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130A_merged" from "/openlane/designs/mkCondensed/runs/RUN_2023.12.11_04.13.36/tmp/synthesis/trimmed.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.11 sec
+ABC: Memory =    9.54 MB. Time =     0.11 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /openlane/designs/mkCondensed/runs/RUN_2023.12.11_04.13.36/tmp/synthesis/synthesis.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2".
+ABC: Setting output load to be 33.442001.
+ABC: + read_constr /openlane/designs/mkCondensed/runs/RUN_2023.12.11_04.13.36/tmp/synthesis/synthesis.sdc 
+ABC: + fx 
+ABC: + mfs 
+ABC: + strash 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + retime -D -D 10000.0 -M 5 
+ABC: + scleanup 
+ABC: Error: The network is combinational.
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + fraig_restore 
+ABC: + amap -m -Q 0.1 -F 20 -A 20 -C 5000 
+ABC: + retime -D -D 10000.0 
+ABC: + &get -n 
+ABC: + &st 
+ABC: + &dch 
+ABC: + &nf 
+ABC: + &put 
+ABC: + buffer -N 10 -S 750.0 
+ABC: + upsize -D 10000.0 
+ABC: Current delay (6143.91 ps) does not exceed the target delay (10000.00 ps). Upsizing is not performed.
+ABC: + dnsize -D 10000.0 
+ABC: + stime -p 
+ABC: WireLoad = "none"  Gates =    737 ( 13.0 %)   Cap =  9.2 ff (  2.8 %)   Area =     6249.74 ( 86.7 %)   Delay =  6318.15 ps  ( 12.6 %)               
+ABC: Path  0 --      12 : 0    8 pi                       A =   0.00  Df =  92.0  -49.8 ps  S = 135.5 ps  Cin =  0.0 ff  Cout =  28.5 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     412 : 2    4 sky130_fd_sc_hd__xnor2_2 A =  16.27  Df = 336.4   -7.5 ps  S = 301.8 ps  Cin =  8.5 ff  Cout =  20.3 ff  Cmax = 121.8 ff  G =  230  
+ABC: Path  2 --     418 : 2    1 sky130_fd_sc_hd__nand2_2 A =   6.26  Df = 432.7  -42.9 ps  S =  61.4 ps  Cin =  4.4 ff  Cout =   2.5 ff  Cmax = 295.7 ff  G =   54  
+ABC: Path  3 --     419 : 3    2 sky130_fd_sc_hd__o21a_2  A =   8.76  Df = 579.0  -50.0 ps  S =  71.6 ps  Cin =  2.4 ff  Cout =  11.0 ff  Cmax = 294.8 ff  G =  446  
+ABC: Path  4 --     423 : 3    2 sky130_fd_sc_hd__o21ba_2 A =  10.01  Df = 747.4  -10.8 ps  S =  79.4 ps  Cin =  2.1 ff  Cout =  11.0 ff  Cmax = 264.6 ff  G =  518  
+ABC: Path  5 --     425 : 3    2 sky130_fd_sc_hd__o21ba_2 A =  10.01  Df = 939.9  -77.7 ps  S =  38.5 ps  Cin =  2.1 ff  Cout =   3.3 ff  Cmax = 264.6 ff  G =  154  
+ABC: Path  6 --     428 : 2    3 sky130_fd_sc_hd__and2b_2 A =   8.76  Df =1159.2  -78.7 ps  S =  62.0 ps  Cin =  1.6 ff  Cout =   8.6 ff  Cmax = 310.4 ff  G =  516  
+ABC: Path  7 --     430 : 3    1 sky130_fd_sc_hd__or3_2   A =   7.51  Df =1476.1 -216.9 ps  S =  72.4 ps  Cin =  1.5 ff  Cout =   2.2 ff  Cmax = 310.4 ff  G =  138  
+ABC: Path  8 --     431 : 1    8 sky130_fd_sc_hd__buf_1   A =   3.75  Df =1666.1 -146.4 ps  S = 312.0 ps  Cin =  2.1 ff  Cout =  26.1 ff  Cmax = 130.0 ff  G = 1182  
+ABC: Path  9 --     432 : 1    3 sky130_fd_sc_hd__inv_2   A =   3.75  Df =1759.8 -168.7 ps  S =  67.0 ps  Cin =  4.5 ff  Cout =   7.9 ff  Cmax = 331.4 ff  G =  171  
+ABC: Path 10 --     437 : 4    3 sky130_fd_sc_hd__or4_2   A =   8.76  Df =2247.8 -367.7 ps  S = 109.7 ps  Cin =  1.5 ff  Cout =   5.6 ff  Cmax = 310.4 ff  G =  346  
+ABC: Path 11 --     438 : 2    7 sky130_fd_sc_hd__or2_2   A =   6.26  Df =2598.8 -560.8 ps  S = 114.9 ps  Cin =  1.5 ff  Cout =  20.3 ff  Cmax = 299.4 ff  G = 1326  
+ABC: Path 12 --     444 : 2    4 sky130_fd_sc_hd__or2_2   A =   6.26  Df =2930.6 -746.6 ps  S =  71.8 ps  Cin =  1.5 ff  Cout =   9.1 ff  Cmax = 299.4 ff  G =  598  
+ABC: Path 13 --     445 : 2    4 sky130_fd_sc_hd__or2_2   A =   6.26  Df =3250.9 -928.0 ps  S =  84.2 ps  Cin =  1.5 ff  Cout =  13.2 ff  Cmax = 299.4 ff  G =  880  
+ABC: Path 14 --     463 : 4    3 sky130_fd_sc_hd__a31o_2  A =   8.76  Df =3485.6 -983.8 ps  S =  78.9 ps  Cin =  2.4 ff  Cout =  10.7 ff  Cmax = 271.9 ff  G =  436  
+ABC: Path 15 --     466 : 2    4 sky130_fd_sc_hd__and2_2  A =   7.51  Df =3676.4  -67.4 ps  S =  76.3 ps  Cin =  1.5 ff  Cout =  11.2 ff  Cmax = 303.0 ff  G =  720  
+ABC: Path 16 --     566 : 5    1 sky130_fd_sc_hd__o32a_2  A =  11.26  Df =5095.5 -649.8 ps  S =  48.5 ps  Cin =  2.3 ff  Cout =   1.5 ff  Cmax = 300.3 ff  G =   61  
+ABC: Path 17 --     567 : 2    1 sky130_fd_sc_hd__or2b_2  A =   8.76  Df =5370.1 -773.2 ps  S =  50.0 ps  Cin =  1.6 ff  Cout =   2.4 ff  Cmax = 312.2 ff  G =  147  
+ABC: Path 18 --     568 : 5    1 sky130_fd_sc_hd__o221a_2 A =  11.26  Df =5483.1 -739.5 ps  S =  39.4 ps  Cin =  2.3 ff  Cout =   1.7 ff  Cmax = 281.1 ff  G =   69  
+ABC: Path 19 --     579 : 3    1 sky130_fd_sc_hd__or3_2   A =   7.51  Df =5909.6-1075.0 ps  S =  69.6 ps  Cin =  1.5 ff  Cout =   1.5 ff  Cmax = 310.4 ff  G =   99  
+ABC: Path 20 --     581 : 3    1 sky130_fd_sc_hd__and3_2  A =   7.51  Df =6103.7-1118.6 ps  S =  40.1 ps  Cin =  1.5 ff  Cout =   2.2 ff  Cmax = 309.5 ff  G =  141  
+ABC: Path 21 --     582 : 1    1 sky130_fd_sc_hd__buf_1   A =   3.75  Df =6318.2-1011.6 ps  S = 396.5 ps  Cin =  2.1 ff  Cout =  33.4 ff  Cmax = 130.0 ff  G = 1590  
+ABC: Start-point = pi11 (\x [3]).  End-point = po11 ($auto$rtlil.cc:2669:MuxGate$7126).
+ABC: + print_stats -m 
+ABC: netlist                       : i/o =   55/   46  lat =    0  nd =   737  edge =   1953  area =6250.64  delay =26.00  lev = 26
+ABC: + write_blif /tmp/yosys-abc-rNml31/output.blif 
+
+54.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__nor4b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o41ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a311o_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nand4_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and4b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a41o_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a2111o_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and4bb_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor3_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:       18
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nor4_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o2bb2a_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and4_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:       16
+ABC RESULTS:   sky130_fd_sc_hd__or4b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__o32a_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:       33
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:       16
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__o22a_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__o221a_2 cells:       22
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:       23
+ABC RESULTS:   sky130_fd_sc_hd__o2111a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:       64
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:       27
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__o311a_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:       31
+ABC RESULTS:   sky130_fd_sc_hd__o31a_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__or2b_2 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__mux2_2 cells:       31
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:       44
+ABC RESULTS:   sky130_fd_sc_hd__buf_1 cells:       63
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:       48
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:       28
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:       50
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:       26
+ABC RESULTS:   sky130_fd_sc_hd__or4_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o221ai_2 cells:        3
+ABC RESULTS:        internal signals:     1312
+ABC RESULTS:           input signals:       55
+ABC RESULTS:          output signals:       46
+Removing temp directory.
+
+55. Executing SETUNDEF pass (replace undef values with defined constants).
+
+56. Executing HILOMAP pass (mapping to constant drivers).
+
+57. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+58. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCondensed..
+Removed 0 unused cells and 1428 unused wires.
+<suppressed ~36 debug messages>
+
+59. Executing INSBUF pass (insert buffer cells for connected wires).
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module mkCondensed...
+Warning: Wire mkCondensed.\read_out [10] is used but has no driver.
+Warning: Wire mkCondensed.\read_out [9] is used but has no driver.
+Warning: Wire mkCondensed.\read_out [8] is used but has no driver.
+Warning: Wire mkCondensed.\read_out [7] is used but has no driver.
+Warning: Wire mkCondensed.\read_out [6] is used but has no driver.
+Warning: Wire mkCondensed.\read_out [5] is used but has no driver.
+Warning: Wire mkCondensed.\read_out [4] is used but has no driver.
+Warning: Wire mkCondensed.\read_out [3] is used but has no driver.
+Warning: Wire mkCondensed.\read_out [2] is used but has no driver.
+Warning: Wire mkCondensed.\read_out [1] is used but has no driver.
+Warning: Wire mkCondensed.\read_out [0] is used but has no driver.
+Warning: Wire mkCondensed.\RDY_set_mode is used but has no driver.
+Warning: Wire mkCondensed.\RDY_set_inp is used but has no driver.
+Warning: Wire mkCondensed.\RDY_set_bias is used but has no driver.
+Warning: Wire mkCondensed.\RDY_read_out is used but has no driver.
+Found and reported 15 problems.
+
+61. Printing statistics.
+
+=== mkCondensed ===
+
+   Number of wires:                785
+   Number of wire bits:            808
+   Number of public wires:          48
+   Number of public wire bits:      71
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                787
+     sky130_fd_sc_hd__a2111o_2       3
+     sky130_fd_sc_hd__a211o_2        9
+     sky130_fd_sc_hd__a211oi_2       3
+     sky130_fd_sc_hd__a21bo_2        6
+     sky130_fd_sc_hd__a21boi_2       2
+     sky130_fd_sc_hd__a21o_2        28
+     sky130_fd_sc_hd__a21oi_2       20
+     sky130_fd_sc_hd__a22o_2        10
+     sky130_fd_sc_hd__a22oi_2        1
+     sky130_fd_sc_hd__a2bb2o_2       4
+     sky130_fd_sc_hd__a311o_2        2
+     sky130_fd_sc_hd__a31o_2        15
+     sky130_fd_sc_hd__a32o_2         5
+     sky130_fd_sc_hd__a41o_2         2
+     sky130_fd_sc_hd__and2_2        44
+     sky130_fd_sc_hd__and2b_2       18
+     sky130_fd_sc_hd__and3_2        16
+     sky130_fd_sc_hd__and3b_2        4
+     sky130_fd_sc_hd__and4_2         5
+     sky130_fd_sc_hd__and4b_2        1
+     sky130_fd_sc_hd__and4bb_2       1
+     sky130_fd_sc_hd__buf_1         63
+     sky130_fd_sc_hd__conb_1         4
+     sky130_fd_sc_hd__dfxtp_2       46
+     sky130_fd_sc_hd__inv_2         33
+     sky130_fd_sc_hd__mux2_2        31
+     sky130_fd_sc_hd__nand2_2       48
+     sky130_fd_sc_hd__nand2b_2       2
+     sky130_fd_sc_hd__nand3_2        2
+     sky130_fd_sc_hd__nand3b_2       1
+     sky130_fd_sc_hd__nand4_2        1
+     sky130_fd_sc_hd__nor2_2        64
+     sky130_fd_sc_hd__nor3_2         3
+     sky130_fd_sc_hd__nor4_2         1
+     sky130_fd_sc_hd__nor4b_2        1
+     sky130_fd_sc_hd__o2111a_2       2
+     sky130_fd_sc_hd__o211a_2       26
+     sky130_fd_sc_hd__o21a_2        27
+     sky130_fd_sc_hd__o21ai_2       23
+     sky130_fd_sc_hd__o21ba_2        4
+     sky130_fd_sc_hd__o21bai_2       2
+     sky130_fd_sc_hd__o221a_2       22
+     sky130_fd_sc_hd__o221ai_2       3
+     sky130_fd_sc_hd__o22a_2         7
+     sky130_fd_sc_hd__o22ai_2        3
+     sky130_fd_sc_hd__o2bb2a_2       3
+     sky130_fd_sc_hd__o311a_2        6
+     sky130_fd_sc_hd__o31a_2        10
+     sky130_fd_sc_hd__o31ai_2        3
+     sky130_fd_sc_hd__o32a_2         3
+     sky130_fd_sc_hd__o41ai_2        1
+     sky130_fd_sc_hd__or2_2         50
+     sky130_fd_sc_hd__or2b_2         9
+     sky130_fd_sc_hd__or3_2         15
+     sky130_fd_sc_hd__or3b_2         8
+     sky130_fd_sc_hd__or4_2         11
+     sky130_fd_sc_hd__or4b_2         3
+     sky130_fd_sc_hd__xnor2_2       31
+     sky130_fd_sc_hd__xor2_2        16
+
+   Chip area for module '\mkCondensed': 7243.196800
+
+62. Executing Verilog backend.
+Dumping module `\mkCondensed'.
+
+Warnings: 17 unique messages, 17 total
+End of script. Logfile hash: 55d1e5b61e, CPU: user 1.79s system 0.03s, MEM: 36.51 MB peak
+Yosys 0.34 (git sha1 4a1b5599258, gcc 8.3.1 -fPIC -Os)
+Time spent: 56% 2x abc (2 sec), 14% 35x opt_expr (0 sec), ...
